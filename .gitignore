@@ -1,0 +1,39 @@
+# Python environment
+.venv/
+__pycache__/
+*.py[cod]
+
+# Secrets
+.env
+.env.*
+
+# Local database
+*.db
+
+# Generated outputs
+Data/valid_records.csv
+Data/quarantine_report.csv
+
+# Editor and operating system files
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Original dataset
+Data/Raw/Online_Retail.xlsx
+
+# Python environment and cache
+.venv/
+__pycache__/
+*.py[cod]
+
+# Secrets
+.env
+.env.*
+
+# Local database
+*.db
+
+# Generated outputs
+Data/valid_records.csv
+Data/quarantine_report.csv

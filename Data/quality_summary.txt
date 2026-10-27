@@ -1,0 +1,35 @@
+DataTrust AI - Data Quality Summary
+Source dataset: Online_Retail.xlsx
+Total rows: 541909
+Total missing values: 136534
+Duplicate rows: 5268
+Missing values by column:
+  InvoiceNo: 0
+  StockCode: 0
+  Description: 1454
+  Quantity: 0
+  InvoiceDate: 0
+  UnitPrice: 0
+  CustomerID: 135080
+  Country: 0
+
+Validation rule counts (% of source rows; rules may overlap):
+MissingDescription: 1454 (0.27%)
+MissingQuantity: 0 (0.00%)
+MissingUnitPrice: 0 (0.00%)
+NegativeQuantityNeedsReview: 10624 (1.96%)
+ZeroQuantityNeedsReview: 0 (0.00%)
+UnitPriceNeedsReview: 2517 (0.46%)
+InvalidInvoiceDate: 0 (0.00%)
+InvalidQuantityType: 0 (0.00%)
+InvalidPriceType: 0 (0.00%)
+
+Valid rows: 530104
+Rows needing review: 11805
+
+Latest pipeline run ID: 21
+Output files:
+  Valid records: C:\Users\koshi\OneDrive\DataTrust-AI\Data\valid_records.csv
+  Quarantine report: C:\Users\koshi\OneDrive\DataTrust-AI\Data\quarantine_report.csv
+  Quality summary: C:\Users\koshi\OneDrive\DataTrust-AI\Data\quality_summary.txt
+  Quality scorecard: C:\Users\koshi\OneDrive\DataTrust-AI\Data\quality_scorecard.csv

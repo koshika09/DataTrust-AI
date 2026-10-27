@@ -1,0 +1,35 @@
+category,metric,count,percentage,score,notes
+dataset,Source dataset,,,,Online_Retail.xlsx
+dataset,Total rows,541909,,,
+dataset,Total columns,8,,,
+dataset,Total missing values,136534,,,
+dataset,Exact duplicate rows,5268,0.9721,,Percentage is duplicate rows divided by total rows
+column_completeness,InvoiceNo,0,100.0,,Count is missing values; percentage is non-missing rows
+column_completeness,StockCode,0,100.0,,Count is missing values; percentage is non-missing rows
+column_completeness,Description,1454,99.7317,,Count is missing values; percentage is non-missing rows
+column_completeness,Quantity,0,100.0,,Count is missing values; percentage is non-missing rows
+column_completeness,InvoiceDate,0,100.0,,Count is missing values; percentage is non-missing rows
+column_completeness,UnitPrice,0,100.0,,Count is missing values; percentage is non-missing rows
+column_completeness,CustomerID,135080,75.0733,,Count is missing values; percentage is non-missing rows
+column_completeness,Country,0,100.0,,Count is missing values; percentage is non-missing rows
+validation_rule,MissingDescription,1454,0.2683,,Percentage of source rows; rule counts can overlap
+validation_rule,MissingQuantity,0,0.0,,Percentage of source rows; rule counts can overlap
+validation_rule,MissingUnitPrice,0,0.0,,Percentage of source rows; rule counts can overlap
+validation_rule,NegativeQuantityNeedsReview,10624,1.9605,,Percentage of source rows; rule counts can overlap
+validation_rule,ZeroQuantityNeedsReview,0,0.0,,Percentage of source rows; rule counts can overlap
+validation_rule,UnitPriceNeedsReview,2517,0.4645,,Percentage of source rows; rule counts can overlap
+validation_rule,InvalidInvoiceDate,0,0.0,,Percentage of source rows; rule counts can overlap
+validation_rule,InvalidQuantityType,0,0.0,,Percentage of source rows; rule counts can overlap
+validation_rule,InvalidPriceType,0,0.0,,Percentage of source rows; rule counts can overlap
+score_component,Completeness,136534,96.8506,96.8506,100 * (1 - missing cells / total cells)
+score_component,Duplicate-free rate,5268,99.0279,99.0279,100 * (1 - exact duplicate rows / total rows)
+score_component,Current-rule pass rate,530104,97.8216,97.8216,100 * rows passing current validation rules / total rows
+overall_score,Overall data quality score,,97.9,97.9,Arithmetic mean of the three equally weighted components; not an industry-standard score
+score_limitation,CustomerID missingness,,,,Missing CustomerID values reduce completeness even when acceptable for a particular use case.
+score_limitation,Negative quantities,,,,"Negative quantities may represent legitimate returns; this pipeline marks them for review, which lowers the current-rule pass-rate component."
+score_limitation,Metric interpretation,,,,"The score is a simple project-specific summary. Components may overlap, and equal weights are a transparent choice rather than a universal standard."
+pipeline,Latest pipeline run ID,21,,,
+output,Valid records,,,,C:\Users\koshi\OneDrive\DataTrust-AI\Data\valid_records.csv
+output,Quarantine report,,,,C:\Users\koshi\OneDrive\DataTrust-AI\Data\quarantine_report.csv
+output,Quality summary,,,,C:\Users\koshi\OneDrive\DataTrust-AI\Data\quality_summary.txt
+output,Quality scorecard,,,,C:\Users\koshi\OneDrive\DataTrust-AI\Data\quality_scorecard.csv
